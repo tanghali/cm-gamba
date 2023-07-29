@@ -8,13 +8,14 @@ import { store } from '@/store/store.js'
     width="520px"
   >
     <v-card-title>
-      <div class="title text-center blue-grey--text text--lighten-4">
-        <h2>Gamba Roll</h2>
+      <div class="title-text text-center blue-grey--text text--lighten-4">
+        Gamba Roll
       </div>
     </v-card-title>
     <v-card-text>
-      <v-row class="ml-1">
-        <h3>Team 1</h3>
+
+      <v-row class="team-title-text ml-1 mt-2">
+        Team 1
       </v-row>
       <v-row>
         <v-col v-for="(character, index) in store.team1" :key="index" cols="3">
@@ -22,8 +23,8 @@ import { store } from '@/store/store.js'
         </v-col>
       </v-row>
 
-      <v-row class="ml-1 mt-2">
-        <h3>Team 2</h3>
+      <v-row class="team-title-text ml-1 mt-2">
+        Team 2
       </v-row>
       <v-row>
         <v-col v-for="(character, index) in store.team2" :key="index" cols="3">
@@ -32,7 +33,7 @@ import { store } from '@/store/store.js'
       </v-row>
     
       <div class="counter text-right blue-grey--text text--darken-1">
-        {{ store.rollCount }}
+        discord.gg/childe {{ store.rollCount }}
       </div>
     </v-card-text>
 
@@ -46,6 +47,9 @@ import GambaSlot from './GambaSlot'
 export default {
   components: {
     GambaSlot
+  },
+
+  methods: {
   }
 }
 </script>
@@ -53,5 +57,17 @@ export default {
 <style scoped>
 .counter {
   font-size: 9px;
+}
+
+.title-text {
+  font-size: 33px;
+  font-weight: bold;
+  width: 500px;
+}
+
+.team-title-text {
+  font-size: 16px;
+  font-weight: bold;
+  width: 500px;  
 }
 </style>
